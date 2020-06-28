@@ -15,7 +15,11 @@ export default function MyTabs() {
 				inactiveBackgroundColor: '#141414',
 				activeBackgroundColor: '#141414',
 				activeTintColor: '#EE4622',
-				inactiveTintColor: '#EE4622'
+				inactiveTintColor: '#EE4622',
+				style: {
+					borderTopWidth: 1,
+					borderTopColor: '#141414'
+				}
 			}}
 		>
 			<Tab.Screen
