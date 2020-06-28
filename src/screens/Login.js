@@ -15,7 +15,7 @@ const Login = ({ navigation }) => {
 			/>
 
 			<TextInput
-				style={[ styles.input ]}
+				style={styles.input}
 				placeholderTextColor={'darkgray'}
 				placeholder={'Email'}
 				keyboardType={'email-address'}
@@ -23,7 +23,7 @@ const Login = ({ navigation }) => {
 				onChangeText={setEmail}
 			/>
 			<TextInput
-				style={[ styles.input ]}
+				style={styles.input}
 				placeholderTextColor={'darkgray'}
 				placeholder={'Password'}
 				secureTextEntry
@@ -31,7 +31,7 @@ const Login = ({ navigation }) => {
 				onChangeText={setPassword}
 			/>
 			<TouchableOpacity
-				style={[ styles.containerBtnLogin ]}
+				style={styles.containerBtnLogin}
 				onPress={() => {
 					navigation.navigate('Login');
 				}}
@@ -39,7 +39,7 @@ const Login = ({ navigation }) => {
 				<Text style={styles.textBtnLogin}>Login</Text>
 			</TouchableOpacity>
 			<TouchableOpacity
-				style={[ styles.containerRegister ]}
+				style={styles.containerRegister}
 				onPress={() => {
 					navigation.navigate('Registration');
 				}}

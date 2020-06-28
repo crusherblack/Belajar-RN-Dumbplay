@@ -1,9 +1,20 @@
 import React from 'react';
-import { View, StyleSheet, Text, TextInput, TouchableOpacity, Image } from 'react-native';
+import {
+	View,
+	StyleSheet,
+	Text,
+	TextInput,
+	TouchableOpacity,
+	Picker
+} from 'react-native';
 
 const Register = ({ navigation }) => {
+	const [ name, setName ] = React.useState('');
 	const [ email, setEmail ] = React.useState('');
 	const [ password, setPassword ] = React.useState('');
+	const [ gender, setGender ] = React.useState('');
+	const [ phone, setPhone ] = React.useState('');
+	const [ address, setAddress ] = React.useState('');
 
 	return (
 		<View style={styles.container}>
@@ -18,16 +29,15 @@ const Register = ({ navigation }) => {
 				Register
 			</Text>
 			<TextInput
-				style={[ styles.input ]}
+				style={styles.input}
 				placeholderTextColor={'darkgray'}
 				placeholder={'Name'}
-				secureTextEntry
-				value={password}
-				onChangeText={setPassword}
+				value={name}
+				onChangeText={setName}
 			/>
 
 			<TextInput
-				style={[ styles.input ]}
+				style={styles.input}
 				placeholderTextColor={'darkgray'}
 				placeholder={'Email'}
 				keyboardType={'email-address'}
@@ -35,39 +45,33 @@ const Register = ({ navigation }) => {
 				onChangeText={setEmail}
 			/>
 			<TextInput
-				style={[ styles.input ]}
+				style={styles.input}
 				placeholderTextColor={'darkgray'}
 				placeholder={'Password'}
 				secureTextEntry
 				value={password}
 				onChangeText={setPassword}
 			/>
+			<Picker selectedValue={gender} style={styles.input} onValueChange={setGender}>
+				<Picker.Item label="Java" value="java" />
+				<Picker.Item label="JavaScript" value="js" />
+			</Picker>
 			<TextInput
-				style={[ styles.input ]}
-				placeholderTextColor={'darkgray'}
-				placeholder={'Gender'}
-				secureTextEntry
-				value={password}
-				onChangeText={setPassword}
-			/>
-			<TextInput
-				style={[ styles.input ]}
+				style={styles.input}
 				placeholderTextColor={'darkgray'}
 				placeholder={'Phone'}
-				secureTextEntry
-				value={password}
-				onChangeText={setPassword}
+				value={phone}
+				onChangeText={setPhone}
 			/>
 			<TextInput
-				style={[ styles.input ]}
+				style={styles.input}
 				placeholderTextColor={'darkgray'}
 				placeholder={'Address'}
-				secureTextEntry
-				value={password}
-				onChangeText={setPassword}
+				value={address}
+				onChangeText={setAddress}
 			/>
 			<TouchableOpacity
-				style={[ styles.containerBtnLogin ]}
+				style={styles.containerBtnLogin}
 				onPress={() => {
 					navigation.navigate('Login');
 				}}
@@ -94,6 +98,7 @@ const styles = StyleSheet.create({
 		color: 'black',
 		marginVertical: 8
 	},
+
 	containerBtnLogin: {
 		width: '100%',
 		alignItems: 'center',
