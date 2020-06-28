@@ -2,10 +2,12 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const Tab = createBottomTabNavigator();
 import Home from '../screens/Home';
 import Setting from '../screens/Setting';
 import Profile from '../screens/Profile';
+import Login from '../screens/Login';
+
+const Tab = createBottomTabNavigator();
 
 export default function MyTabs() {
 	return (
