@@ -13,7 +13,7 @@ import { Surface } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 const { width, height } = Dimensions.get('window');
 
-class CatogComponent extends Component {
+class Artis extends Component {
 	constructor(props) {
 		super(props);
 	}
@@ -25,29 +25,25 @@ class CatogComponent extends Component {
 	render() {
 		let categories = [
 			{
-				name: 'Rock',
-				img: require('../Assets/c1.jpg')
+				name: 'Imagine Dragons',
+				img: require('../Assets/imagine.jpg')
 			},
 			{
-				name: 'Metal',
-				img: require('../Assets/c2.jpg')
+				name: 'The Script',
+				img: require('../Assets/script.jpg')
 			},
 			{
-				name: 'Rock',
-				img: require('../Assets/c3.jpg')
+				name: 'Ed Sheeren',
+				img: require('../Assets/edsheren.jpg')
 			},
 			{
-				name: 'Jazz',
-				img: require('../Assets/c4.jpg')
-			},
-			{
-				name: 'Classic',
-				img: require('../Assets/c5.jpg')
+				name: 'Eminem',
+				img: require('../Assets/eminem.jpg')
 			}
 		];
 		return (
 			<View style={styles.container}>
-				<Text style={styles.title}>Categories</Text>
+				<Text style={styles.title}>Artist</Text>
 				<FlatList
 					data={categories}
 					horizontal={true}
@@ -61,9 +57,9 @@ class CatogComponent extends Component {
 									<ImageBackground
 										source={item.img}
 										style={styles.img}
-										blurRadius={3}
+										blurRadius={0}
 									>
-										<Icon name="music" color="#fff" size={22} />
+										<Icon name="play-circle" color="#fff" size={22} />
 										<Text style={styles.name}>{item.name}</Text>
 									</ImageBackground>
 								</Surface>
@@ -76,7 +72,7 @@ class CatogComponent extends Component {
 	}
 }
 
-export default CatogComponent;
+export default Artis;
 
 const styles = StyleSheet.create({
 	container: {
@@ -112,6 +108,6 @@ const styles = StyleSheet.create({
 		left: 15,
 		color: '#fff',
 		fontWeight: 'bold',
-		fontSize: 25
+		fontSize: 20
 	}
 });

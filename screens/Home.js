@@ -3,7 +3,7 @@ import { View, StyleSheet, Text, ScrollView } from 'react-native';
 
 import Banner from '../components/Banner';
 import Music from '../components/Music';
-import Category from '../components/Category';
+import Artis from '../components/Artis';
 
 const Home = ({ navigation }) => {
 	return (
@@ -11,7 +11,7 @@ const Home = ({ navigation }) => {
 			<Text style={styles.title}>DumbPlay</Text>
 			<ScrollView>
 				<Banner navigation={navigation} />
-				<Category navigation={navigation} />
+				<Artis navigation={navigation} />
 				<Text style={[ styles.titleSongs, { marginTop: 12 } ]}>Songs</Text>
 				<Music navigation={navigation} />
 			</ScrollView>
