@@ -82,6 +82,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     color: 'black',
     marginVertical: 8,
+    fontSize: 16,
   },
   containerBtnLogin: {
     width: '100%',
@@ -95,7 +96,7 @@ const styles = StyleSheet.create({
   textBtnLogin: {
     color: 'white',
     fontWeight: '500',
-    fontSize: 16,
+    fontSize: 18,
   },
   containerRegister: {
     width: '100%',
