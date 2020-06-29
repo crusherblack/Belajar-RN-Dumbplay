@@ -6,6 +6,7 @@ import {
   TextInput,
   TouchableOpacity,
   Picker,
+  ScrollView,
 } from 'react-native';
 
 const Register = ({navigation}) => {
@@ -18,67 +19,69 @@ const Register = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <Text
-        style={{
-          color: '#EE4622',
-          fontSize: 25,
-          fontWeight: 'bold',
-          marginBottom: 7,
-        }}>
-        Register
-      </Text>
-      <TextInput
-        style={styles.input}
-        placeholderTextColor={'darkgray'}
-        placeholder={'Name'}
-        value={name}
-        onChangeText={setName}
-      />
+      <ScrollView style={{width: '100%'}}>
+        <Text
+          style={{
+            color: '#EE4622',
+            fontSize: 25,
+            fontWeight: 'bold',
+            marginBottom: 7,
+          }}>
+          Register
+        </Text>
+        <TextInput
+          style={styles.input}
+          placeholderTextColor={'darkgray'}
+          placeholder={'Name'}
+          value={name}
+          onChangeText={setName}
+        />
 
-      <TextInput
-        style={styles.input}
-        placeholderTextColor={'darkgray'}
-        placeholder={'Email'}
-        keyboardType={'email-address'}
-        value={email}
-        onChangeText={setEmail}
-      />
-      <TextInput
-        style={styles.input}
-        placeholderTextColor={'darkgray'}
-        placeholder={'Password'}
-        secureTextEntry
-        value={password}
-        onChangeText={setPassword}
-      />
-      <Picker
-        selectedValue={gender}
-        style={styles.input}
-        onValueChange={setGender}>
-        <Picker.Item label="Java" value="java" />
-        <Picker.Item label="JavaScript" value="js" />
-      </Picker>
-      <TextInput
-        style={styles.input}
-        placeholderTextColor={'darkgray'}
-        placeholder={'Phone'}
-        value={phone}
-        onChangeText={setPhone}
-      />
-      <TextInput
-        style={styles.input}
-        placeholderTextColor={'darkgray'}
-        placeholder={'Address'}
-        value={address}
-        onChangeText={setAddress}
-      />
-      <TouchableOpacity
-        style={styles.containerBtnLogin}
-        onPress={() => {
-          navigation.navigate('Login');
-        }}>
-        <Text style={styles.textBtnLogin}>Sign Up</Text>
-      </TouchableOpacity>
+        <TextInput
+          style={styles.input}
+          placeholderTextColor={'darkgray'}
+          placeholder={'Email'}
+          keyboardType={'email-address'}
+          value={email}
+          onChangeText={setEmail}
+        />
+        <TextInput
+          style={styles.input}
+          placeholderTextColor={'darkgray'}
+          placeholder={'Password'}
+          secureTextEntry
+          value={password}
+          onChangeText={setPassword}
+        />
+        <Picker
+          selectedValue={gender}
+          style={styles.input}
+          onValueChange={setGender}>
+          <Picker.Item label="Java" value="java" />
+          <Picker.Item label="JavaScript" value="js" />
+        </Picker>
+        <TextInput
+          style={styles.input}
+          placeholderTextColor={'darkgray'}
+          placeholder={'Phone'}
+          value={phone}
+          onChangeText={setPhone}
+        />
+        <TextInput
+          style={styles.input}
+          placeholderTextColor={'darkgray'}
+          placeholder={'Address'}
+          value={address}
+          onChangeText={setAddress}
+        />
+        <TouchableOpacity
+          style={styles.containerBtnLogin}
+          onPress={() => {
+            navigation.navigate('Login');
+          }}>
+          <Text style={styles.textBtnLogin}>Sign Up</Text>
+        </TouchableOpacity>
+      </ScrollView>
     </View>
   );
 };
