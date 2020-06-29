@@ -18,7 +18,7 @@ const Login = ({navigation}) => {
   const dispatch = useDispatch();
 
   const [email, setEmail] = React.useState('fadhildarma13@gmail.com');
-  const [password, setPassword] = React.useState('123456');
+  const [password, setPassword] = React.useState('kelas2tkj');
 
   return (
     <View style={styles.container}>
