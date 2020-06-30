@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Login from '../screens/Login';
 import Register from '../screens/Register';
+import SplashScreen from '../screens/SplashScreen';
 
 const AuthStack = createStackNavigator();
 const LoginStack = createStackNavigator();
@@ -14,7 +15,9 @@ export function AuthStackNavigator() {
 			screenOptions={{
 				headerShown: false
 			}}
+			initialRouteName="Splash"
 		>
+			<AuthStack.Screen name={'Splash'} component={SplashScreen} />
 			<AuthStack.Screen name={'LoginStack'}>
 				{() => (
 					<LoginStack.Navigator
