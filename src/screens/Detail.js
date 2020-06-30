@@ -6,19 +6,19 @@ import Icon from 'react-native-vector-icons/AntDesign';
 const Detail = () => {
 	const recipes = [
 		{
-			name: 'Pad Thai',
-			info: '45min | 2 servings',
+			name: 'Gitar Classic',
+			info: 'Wooden',
 			image: require('../Assets/gitar1.png')
 		},
 		{
-			name: 'Pad Thai',
-			info: '45min | 2 servings',
-			image: require('../Assets/gitar1.png')
+			name: 'Gitar Listrik',
+			info: 'Plastic',
+			image: require('../Assets/gitar2.png')
 		},
 		{
-			name: 'Pad Thai',
-			info: '45min | 2 servings',
-			image: require('../Assets/gitar1.png')
+			name: 'Gitar Keren',
+			info: 'Alumunium',
+			image: require('../Assets/gitar3.png')
 		}
 	];
 
@@ -30,17 +30,17 @@ const Detail = () => {
 					<MenuBar>
 						<Back>
 							<Icon name="arrowleft" size={24} color="#fff" />
-							<Text style={{ marginLeft: 10 }}>Ingredients</Text>
+							<Text style={{ marginLeft: 10 }}>Music</Text>
 						</Back>
 						<Icon name="heart" size={24} color="#fff" />
 					</MenuBar>
 					<MainRecipe>
 						<Text title heavy>
-							Spicy Shrimp
+							Guitar
 						</Text>
 						<Devider />
-						<Text bold>80 Calories per 100g</Text>
-						<Text>3g fat | 10g protein | 8g carbs</Text>
+						<Text bold>String Instrument</Text>
+						<Text>120cm | 20cm | Wood</Text>
 					</MainRecipe>
 					<Button>
 						<Text bold small>
@@ -51,10 +51,10 @@ const Detail = () => {
 			</TopBackround>
 			<RecipesContainer>
 				<Text dark heavy large>
-					Recipes
+					Details
 				</Text>
 				<Text dark small>
-					15 recipes available
+					15 type available
 				</Text>
 				<Recipes>
 					{recipes.map((recipe, index) => (
