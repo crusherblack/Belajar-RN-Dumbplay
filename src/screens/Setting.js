@@ -4,7 +4,7 @@ import {Formik} from 'formik';
 import {TextInput} from 'react-native-paper';
 import * as yup from 'yup';
 
-const FormSchema = yup.object({
+const FormSchema = yup.object().shape({
   title: yup.string().required().min(4),
   body: yup.string().required().min(8),
   rating: yup
